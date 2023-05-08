@@ -56,7 +56,8 @@ export const nav: DefaultTheme.Config['nav'] = [
       { text: 'miniprogram', link: '/pit/miniprogram/miniprogram' },
       { text: 'npm', link: '/pit/npm/npm' },
       { text: 'plugins', link: '/pit/plugins/plugins' }
-    ]
+    ],
+    activeMatch: '^/pit'
   },
   {
     text: '提效工具',
