@@ -125,12 +125,14 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
   ],
   '/pit/': [
     {
-      text: '踩坑记录',
+      text: '工作日常',
       // collapsed: false,
       items: [
-        { text: 'npm 踩坑记录', link: '/pit/npm' },
-        { text: 'PC 踩坑记录', link: '/pit/pc' },
-        { text: 'H5 踩坑记录', link: '/pit/h5' }
+        { text: 'npm', link: '/pit/npm/npm' },
+        { text: 'PC', link: '/pit/pc/pc' },
+        { text: 'H5', link: '/pit/h5/h5' },
+        { text: 'miniprogram', link: '/pit/miniprogram/miniprogram' },
+        { text: 'plugins', link: '/pit/plugins/plugins' }
       ]
     }
   ]

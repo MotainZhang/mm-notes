@@ -4,7 +4,6 @@ import DefaultTheme from 'vitepress/theme'
 
 import Visitor from './components/Visitor.vue'
 import Copyright from './components/Copyright.vue'
-import AsideSponsors from './components/AsideSponsors.vue'
 import MNavLinks from './components/MNavLinks.vue'
 
 import './styles/index.scss'
@@ -50,8 +49,7 @@ export default {
        * https://github.com/vuejs/vitepress/blob/main/src/client/theme-default/Layout.vue
        */
       'nav-bar-title-after': () => h(Visitor),
-      'doc-after': () => h(Copyright),
-      'aside-bottom': () => h(AsideSponsors)
+      'doc-after': () => h(Copyright)
     })
   },
   enhanceApp({ app }: { app: App }) {

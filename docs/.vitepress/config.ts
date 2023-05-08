@@ -12,8 +12,8 @@ export default defineConfig({
   base: process.env.APP_BASE_PATH || '/',
 
   lang: 'zh-CN',
-  title: '茂茂物语',
-  description: '茂茂的成长之路，包含前端常用知识、源码阅读笔记、各种奇淫技巧、日常提效工具等',
+  title: 'motainzhang',
+  description: '不积跬步无以至千里，不积小流无以成江海',
   head,
 
   lastUpdated: true,
@@ -26,10 +26,8 @@ export default defineConfig({
 
   /* 主题配置 */
   themeConfig: {
+    logo: 'https://mp-0971f295-ba06-4d1c-8c5f-e03738f37c87.cdn.bspapp.com/cloudstorage/19672766-4860-4ab2-ba29-91882f45eb49.jpeg',
     i18nRouting: false,
-
-    logo: '/logo.png',
-
     nav,
     sidebar,
     /* 右侧大纲配置 */
@@ -38,10 +36,10 @@ export default defineConfig({
       label: '本页目录'
     },
 
-    socialLinks: [{ icon: 'github', link: 'https://github.com/maomao1996' }],
+    socialLinks: [{ icon: 'github', link: 'https://github.com/MotainZhang' }],
 
     footer: {
-      message: '如有转载或 CV 的请标注本站原文地址',
+      message: '本站vitepress搭建，感谢vitepress和maomao1996',
       copyright: 'Copyright © 2019-present maomao'
     },
 
@@ -67,7 +65,7 @@ export default defineConfig({
       })
   },
   buildEnd: async ({ outDir }) => {
-    const sitemap = new SitemapStream({ hostname: 'https://notes.fe-mm.com/' })
+    const sitemap = new SitemapStream({ hostname: 'https://motainzhang.wiki/' })
     const writeStream = createWriteStream(resolve(outDir, 'sitemap.xml'))
     sitemap.pipe(writeStream)
     links.forEach((link) => sitemap.write(link))

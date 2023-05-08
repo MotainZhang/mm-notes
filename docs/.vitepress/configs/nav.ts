@@ -1,9 +1,8 @@
 import type { DefaultTheme } from 'vitepress'
 
 export const nav: DefaultTheme.Config['nav'] = [
-  { text: '导航', link: '/nav', activeMatch: '^/nav' },
   {
-    text: '前端物语',
+    text: '前端日记',
     items: [
       { text: 'JavaScript 基础知识', link: '/fe/javascript/types' },
       { text: 'ES6 常用知识', link: '/fe/es6/' },
@@ -12,9 +11,8 @@ export const nav: DefaultTheme.Config['nav'] = [
     ],
     activeMatch: '^/fe'
   },
-  { text: '源码阅读', link: '/analysis/utils/only-allow', activeMatch: '^/analysis' },
   {
-    text: 'Workflow',
+    text: '技巧笔记',
     items: [
       {
         text: '常用工具/方法',
@@ -50,7 +48,16 @@ export const nav: DefaultTheme.Config['nav'] = [
     ],
     activeMatch: '^/workflow'
   },
-  { text: '踩坑记录', link: '/pit/npm', activeMatch: '^/pit' },
+  {
+    text: '工作日常',
+    items: [
+      { text: 'h5', link: '/pit/h5/h5' },
+      { text: 'pc', link: '/pit/pc/pc' },
+      { text: 'miniprogram', link: '/pit/miniprogram/miniprogram' },
+      { text: 'npm', link: '/pit/npm/npm' },
+      { text: 'plugins', link: '/pit/plugins/plugins' }
+    ]
+  },
   {
     text: '提效工具',
     items: [
@@ -69,20 +76,5 @@ export const nav: DefaultTheme.Config['nav'] = [
       { text: '书签脚本', link: '/efficiency/bookmark-scripts' }
     ],
     activeMatch: '^/efficiency'
-  },
-  {
-    text: '茂茂',
-    items: [
-      { text: '个人主页', link: 'https://fe-mm.com' },
-      {
-        text: '日常笔记',
-        link: 'https://github.com/maomao1996/daily-notes'
-      },
-      { text: 'mmPlayer', link: 'https://netease-music.fe-mm.com' },
-      {
-        text: '油猴脚本',
-        link: 'https://github.com/maomao1996/tampermonkey-scripts'
-      }
-    ]
   }
 ]
